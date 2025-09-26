@@ -947,15 +947,15 @@ img{
 }
 
 .section-4 img{
-         width: 15rem;
+         width: 19rem;
     overflow: hidden;
     object-fit: cover;
     height: 15rem;
-    margin: 2rem;
+    margin: 0.5rem;
     border-radius: 10px;
     box-shadow: 0px 10px 30px -14px #000;
-    transition: all .5s ease-in-out;
-    outline-offset: 1rem;
+    transition: all .5s 
+ease-in-out;
 }
 
 .section-4 img:hover{
@@ -963,7 +963,7 @@ img{
     box-shadow: 0px 10px 60px -14px #ed424d;
       transform: scale(1.1);
             z-index: 10;
-            outline: 0.5rem solid #ed424d;
+            
 
 }
 
@@ -987,8 +987,61 @@ img{
 
 .c{
   font-size: 4rem;
-  color: #b2363e;
+  color: #fff;
   font-weight:400;
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px);
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    height: 50px;
+    opacity: 1;
+  }
+}
+
+.box.slide-top {
+  width: 200px;
+  background: #6ca92b;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  overflow: hidden; /* zaroori hai taaki content height ke sath animate ho */
+  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/*  srory section */
+
+.storySection{
+  margin: 3rem;
+}
+
+.storyInfo{
+  text-align: left;
+      margin-top: 4rem;
+}
+
+.storyInfo h1{
+      color: #27ae60;
+    padding-bottom: 2rem;
+}
+
+.storyInfo p{
+  color: #711c1c;
+    line-height: 1.7rem;
+}
+
+.storySection img{
+      width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px 0px #000;
 }
 
 
