@@ -144,3 +144,13 @@ rightBtn.addEventListener("click", () => {
   scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
 });
 
+
+//  const cardss = document.querySelectorAll('.project-card');
+//   const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add('show');
+//       }
+//     });
+//   }, { threshold: 0.2 });
+//   cardss.forEach(card => observer.observe(card));
