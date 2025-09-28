@@ -4,17 +4,49 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const bars = document.querySelector('.fa-bars');
 
 
+const cursor = document.getElementById('cursor');
+const glow = document.getElementById('cursor-glow');
+
+
+
+document.addEventListener('mousemove', (event) => {
+    
+    cursor.style.left = event.x + 'px';
+    cursor.style.top = event.y + 'px';
+})
+
+document.addEventListener('mousemove', (event) => {
+    
+    glow.style.left = event.x - 50 + 'px';
+    glow.style.top = event.y - 50 + 'px';
+
+})
+
 humburger.addEventListener('click', ()=>mobileMenu.classList.toggle('mobile-menu-active'))
     humburger.addEventListener('click', ()=>bars.classList.toggle('fa-xmark'))
 
 
     const teamMembers = [
-	{ name: "Solar Panal" },
+	{ name: "Solar Panel" },
+    {name : "Solar Panel"},
 	{ name: "Solar Rooftop System" },
-	{ name: "Solar Power System (Residential / Commercial / Industrial)" },
-	{ name: "Solar Water Heater" },
-	{ name: "Solar System Repair & Maintenance"}
+    { name: "Solar Water Heater" },
+	{ name: "Solar Power System" }
 ];
+
+const navbar = document.getElementById('navbar');
+
+document.addEventListener('scroll', () =>{
+
+    if(window.scrollY > 0){
+
+        navbar.classList.add('navbar-scroll');
+    }
+    else{
+        navbar.classList.remove('navbar-scroll');
+
+    }
+})
 
 const cards = document.querySelectorAll(".card");
 const dots = document.querySelectorAll(".dot");
@@ -145,12 +177,4 @@ rightBtn.addEventListener("click", () => {
 });
 
 
-//  const cardss = document.querySelectorAll('.project-card');
-//   const observer = new IntersectionObserver(entries => {
-//     entries.forEach(entry => {
-//       if (entry.isIntersecting) {
-//         entry.target.classList.add('show');
-//       }
-//     });
-//   }, { threshold: 0.2 });
-//   cardss.forEach(card => observer.observe(card));
+
