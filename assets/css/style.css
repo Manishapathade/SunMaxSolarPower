@@ -497,9 +497,9 @@ ease-in-out;
 }
 
 .product-section .about-title {
-	font-size: 4.5rem;
-    font-weight: 900;
-    text-transform: uppercase;
+	font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
     letter-spacing: -0.02em;
     position: absolute;
     top: 66rem;
@@ -508,14 +508,15 @@ ease-in-out;
     pointer-events: none;
     white-space: nowrap;
     font-family: "Arial Black", "Arial Bold", Arial, sans-serif;
-    background: linear-gradient(to bottom, rgb(33 61 129) 100%, rgb(255 255 255 / 0%) 60% 60%);
+    /* background: linear-gradient(to bottom, rgb(33 61 129) 100%, rgb(255 255 255 / 0%) 60% 60%); */
+    background: #212121;
     background-clip: text;
     color: transparent;
 }
 
 .product-section a{
       margin: 43rem;
-    background: rgb(41 58 98);
+    background:#212121;
     padding: 0.5rem;
     color: white;
     border-radius: 7px;
@@ -552,7 +553,7 @@ ease-in-out;
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 	transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	cursor: pointer;
-  border: 1px solid #27ae60;
+  border: 1px solid #b2363e;
 }
 
 .card img {
@@ -623,7 +624,7 @@ ease-in-out;
 }
 
 .member-name {
-	color: rgb(8, 42, 123);
+	color:#212121;
 	font-size: 2.5rem;
 	font-weight: 700;
 	margin-bottom: 10px;
@@ -817,10 +818,10 @@ ease-in-out;
     
     /* Section 2 */
    .Ourprojects {
-  background: #274279;
+  background: #424146;
   color: #fff;
   text-align: center;
-  padding: 60px 5%;
+  padding: 60px 0;
   overflow: hidden;
 }
 
@@ -844,7 +845,10 @@ ease-in-out;
 
 .project-slide {
   display: flex;
-  gap: 20px;
+    gap: 77px;
+    background: #f1f1f1;
+    width: 100%;
+    height: auto;
 }
 
 .project-slide img {
@@ -852,6 +856,7 @@ ease-in-out;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
+      transform: rotate3d(1, 1, 1, 45deg);
 }
 
 /* ✅ Infinite smooth right scroll */
@@ -1187,7 +1192,7 @@ ease-in-out;
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #1c873f;
+    color: #230d0d;
 }
 .scroll-container {
   height: 350px;
