@@ -20,37 +20,39 @@
  <!-- HEADER -->
 
 <header>
-        <nav class="navbar flex between wrapper" id="navbar">
-           <div class="flex">
-             <a href="#" class="logo">
-              <img src="./assets/images/sunmax-solar-power.png" alt="">
-            </a>
-          <a href="#" class="name">Sunmax Solar Power</a>
-           </div>
-                <!-- DESKTOP-MENU -->
-             <ul class="navlist flex gap-3">
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="AboutUs.html">About Us</a>
-            </li>
-            <li>
-                <a href="Products.html">Products</a>
-            </li>
-            <li>
-                <a href="Gallary.html">Gallary</a>
-            </li>
-            <li>
-                <a href="ContactUs.html">Contact</a>
-            </li>
-        </ul>
-         <div class="desttop-action flex gap-2">
-           
-            <a href="#" class="humburger">
-                <i class="fa-solid fa-bars"></i>
-            </a>
-        </div>
+       <nav class="navbar flex between wrapper" id="navbar">
+  <div class="flex">
+    <a href="#" class="logo">
+      <img src="./assets/images/sunmax-solar-power.png" alt="">
+    </a>
+    <a href="#" class="name">Sunmax Solar Power</a>
+  </div>
+
+  <!-- DESKTOP-MENU -->
+  <ul class="navlist flex gap-3">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="AboutUs.html">About Us</a></li>
+
+    <!-- Dropdown Menu -->
+    <li class="dropdown">
+      <a href="Products.html" class="dropbtn">Products <i class="fa-solid fa-caret-down"></i></a>
+      <ul class="dropdown-content">
+        <li><a href="SolarPanel.html">Solar Panels</a></li>
+        <li><a href="SolarPowerSystem.html">Solar Power System </a></li>
+        <li><a href="SolarRooftopSystem.html">Solar Rooftop System</a></li>
+        <li><a href="SolarWaterHeater.html">Solar Water Heater</a></li>
+      </ul>
+    </li>
+
+    <li><a href="Gallary.html">Gallary</a></li>
+    <li><a href="ContactUs.html">Contact</a></li>
+  </ul>
+
+  <div class="desttop-action flex gap-2">
+    <a href="#" class="humburger">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+  </div>
 
         <!-- MOBILE MENU  -->
           <ul class="mobile-menu">
@@ -60,9 +62,15 @@
             <li>
                 <a href="AboutUs.html">About Us</a>
             </li>
-            <li>
-                <a href="Products.html">Products</a>
-            </li>
+             <li class="dropdown">
+      <a href="Products.html" class="dropbtn">Products <i class="fa-solid fa-caret-down"></i></a>
+      <ul class="dropdown-content">
+        <li><a href="SolarPanel.html">Solar Panels</a></li>
+        <li><a href="SolarPowerSystem.html">Solar Power System </a></li>
+        <li><a href="SolarRooftopSystem.html">Solar Rooftop System</a></li>
+        <li><a href="SolarWaterHeater.html">Solar Water Heater</a></li>
+      </ul>
+    </li>
             <li>
                 <a href="Gallary.html">Gallary</a>
             </li>

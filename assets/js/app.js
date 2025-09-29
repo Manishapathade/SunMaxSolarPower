@@ -34,6 +34,25 @@ humburger.addEventListener('click', ()=>mobileMenu.classList.toggle('mobile-menu
 	{ name: "Solar Power System" }
 ];
 
+   {/* For mobile toggle dropdown */}
+  document.querySelectorAll(".dropdown .dropbtn").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+      let dropdown = this.nextElementSibling;
+      dropdown.classList.toggle("show");
+    });
+  });
+
+  //  Close dropdown when clicked outside
+  window.addEventListener("click", function(e) {
+    if (!e.target.matches('.dropbtn') && !e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-content").forEach(menu => {
+        menu.classList.remove("show");
+      });
+    }
+  });
+
+
 const navbar = document.getElementById('navbar');
 
 document.addEventListener('scroll', () =>{
