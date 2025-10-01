@@ -744,7 +744,7 @@ ease-in-out;
     letter-spacing: 2px;
     color: var(--pure-white);
     padding: 2rem;
-    background-image: url("/assets/images/panel2.avif");
+    background-image: url("/assets/images/singlePanel1.jpg");
 }
 
 .section-1 button{
@@ -763,17 +763,18 @@ ease-in-out;
       align-items: center;
       justify-content: center;
       gap: 30px;
-      margin: 8rem 3rem 3rem 3rem;
+      margin: 8rem 5rem 3rem 5rem;
     }
 
     .about img {
-      max-width: 60%;
+      max-width: 55%;
       border-radius: 5px;
       flex: 1 1 450px;
     }
 
     .about-text {
       flex: 1 1 450px;
+          margin: 4rem;
     }
 
     .about-text h2 {
@@ -840,7 +841,7 @@ ease-in-out;
 .project-container {
   display: flex;
   width: max-content;
-  animation: scrollRight 30s linear infinite;
+  animation: scrollLeft 30s linear infinite;
 }
 
 .project-slide {
@@ -856,17 +857,6 @@ ease-in-out;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
-      transform: rotate3d(1, 1, 1, 45deg);
-}
-
-/* ✅ Infinite smooth right scroll */
-@keyframes scrollRight {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 
 /* SECTION-2 STYLING  */
@@ -1005,7 +995,7 @@ ease;
 }
 
 .section-4 img{
-         width: 19rem;
+         width: 24rem;
     overflow: hidden;
     object-fit: cover;
     height: 15rem;
@@ -1045,8 +1035,8 @@ ease-in-out;
   font-size: 4rem;
   color: #fff;
   font-weight:400;
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          margin-bottom: 2rem;
 }
 @keyframes slide-top {
   0% {
@@ -1094,6 +1084,8 @@ ease-in-out;
       color: #b2363e;
     padding-bottom: 2rem;
 	        animation: text-pop-up-tr 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          text-align: left;
+    margin-left: -3rem;
 }
 
 @keyframes text-pop-up-tr {
@@ -1153,7 +1145,8 @@ ease-in-out;
     font-size: 3rem;
     margin-top: 3rem;
     animation: text-pop-up-tl 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    margin-left: -13rem;
+    margin-left: 3rem;
+    text-align: left;
 }
 
 @keyframes text-pop-up-tl {
@@ -1273,6 +1266,11 @@ ease-in-out;
 /****************************** PRODUCT PAGE STYLING ***********************************/
 
 
+
+
+
+
+/*************************** PRODUCTS SUB PAGES STYLING ********************************/
 .solarPanel{
          width: 100%;
     height: 50rem;
@@ -1293,11 +1291,10 @@ ease-in-out;
 }
 
 .solarPanel img{
-    width: 80%;
+    width: 60%;
     height: 60%;
     object-fit: cover;
     overflow: hidden;
-    transform: rotate3d(1, 1, 1, 25deg);
     border: 1px solid green;
     border-radius: 20px;
     margin-top: 2rem;
@@ -1321,40 +1318,78 @@ ease-in-out;
 /****************************** FOOTER  STYLING ***********************************/
 
  footer {
-      background: #f0f0f0;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-          padding: 40px 0px 40px;
+  position: relative;
+     background: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 0px 40px;
+    overflow: hidden;
+    z-index: 1;
+        height: 250px;
     }
 
-  
+    .footer-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* send behind content */
+  opacity: 0.5; /* optional transparency */
+}
+
+.footer-coll, .footer-col, .footer-center, .footer-right, .footer-bottom {
+  position: relative;
+  z-index: 2;
+}
+
+ .footer-coll{
+           min-width: 105px;
+    /* margin-left: 8rem; */
+        flex: 1;
+    /* min-width: 219px; */
+    margin: 22px 20px 0 67px;
+  }
 
     .footer-col {
-      flex: 1;
-      min-width: 150px;
-      margin: 0 20px 0 67px;
+     flex: 1;
+    min-width: 246px;
+    margin: 22px 20px 0 67px;
     }
 
-    .footer-col h3 {
+    .footer-col h3,
+    .footer-coll h3 {
       font-size: 16px;
       font-weight: bold;
       margin-bottom: 15px;
+      color: rgb(20, 20, 17);
+    font-size: 1rem;
     }
 
-    .footer-col ul {
+    .footer-col ul,
+    .footer-coll ul {
       list-style: none;
+      color: rgb(20, 20, 17);
+    font-size: 1rem;
     }
 
-    .footer-col ul li {
+    .footer-col ul li,
+    .footer-coll ul li {
       margin-bottom: 10px;
+      color: rgb(20, 20, 17);
+    font-size: 1rem;
     }
 
-    .footer-col ul li a {
+    .footer-col ul li a,
+    .footer-coll ul li a {
       text-decoration: none;
-      color: #333;
+      /* color: #333; */
       font-size: 14px;
       transition: 0.3s;
+      color: rgb(20, 20, 17);
+    font-size: 1rem;
     }
 
     .footer-col ul li a:hover {
@@ -1362,24 +1397,22 @@ ease-in-out;
     }
 
     .footer-center {
-      text-align: center;
-      background-color:#b0363f;
-      height: 255px;
-      border-radius: 4px;
-          margin: 0 20px 0 150px;
+        text-align: center;
+    background-color: #b0363f;
+    height: 250px;
+    border-radius: 4px;
+    margin: 0 20px 0 42px;
     }
 
     .footer-center img {
-      max-width: 120px;
-      margin-bottom: 60px;
-      margin-right: 23px;
-      margin-left: 1rem;
-      margin-top: 3rem;
+      max-width: 130px;
+      margin: 2rem 2rem 3rem 3rem;
     }
 
     .footer-center p {
       font-size: 14px;
       color: #fff;
+      margin: 1rem;
     }
 
     .footer-right {
@@ -1388,7 +1421,9 @@ ease-in-out;
     margin: 0 20px 0 45px;    }
 
     .footer-right p {
-     margin:1px 2px 40px 7px;
+           margin: 28px 4px 40px 7px;
+    color: rgb(20, 20, 17);
+    font-size: 1rem;
 
     }
 

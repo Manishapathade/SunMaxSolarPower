@@ -2,11 +2,24 @@
 const humburger = document.querySelector('.humburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const bars = document.querySelector('.fa-bars');
-
-
 const cursor = document.getElementById('cursor');
 const glow = document.getElementById('cursor-glow');
+const navbar = document.getElementById('navbar');
+const cards = document.querySelectorAll(".card");
+const dots = document.querySelectorAll(".dot");
+const memberName = document.querySelector(".member-name");
+const leftArrow = document.querySelector(".nav-arrow.left");
+const rightArrow = document.querySelector(".nav-arrow.right");
+const scrollContainer = document.getElementById("imageScroll");
+const leftBtn = document.querySelector(".scroll-btn.left");
+const rightBtn = document.querySelector(".scroll-btn.right");
 
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+let currentIndex = 0;
+let isAnimating = false;
 
 
 document.addEventListener('mousemove', (event) => {
@@ -23,7 +36,7 @@ document.addEventListener('mousemove', (event) => {
 })
 
 humburger.addEventListener('click', ()=>mobileMenu.classList.toggle('mobile-menu-active'))
-    humburger.addEventListener('click', ()=>bars.classList.toggle('fa-xmark'))
+humburger.addEventListener('click', ()=>bars.classList.toggle('fa-xmark'))
 
 
     const teamMembers = [
@@ -53,7 +66,6 @@ humburger.addEventListener('click', ()=>mobileMenu.classList.toggle('mobile-menu
   });
 
 
-const navbar = document.getElementById('navbar');
 
 document.addEventListener('scroll', () =>{
 
@@ -67,13 +79,8 @@ document.addEventListener('scroll', () =>{
     }
 })
 
-const cards = document.querySelectorAll(".card");
-const dots = document.querySelectorAll(".dot");
-const memberName = document.querySelector(".member-name");
-const leftArrow = document.querySelector(".nav-arrow.left");
-const rightArrow = document.querySelector(".nav-arrow.right");
-let currentIndex = 0;
-let isAnimating = false;
+
+
 
 function updateCarousel(newIndex) {
 	if (isAnimating) return;
@@ -152,8 +159,7 @@ document.addEventListener("keydown", (e) => {
 	}
 });
 
-let touchStartX = 0;
-let touchEndX = 0;
+
 
 document.addEventListener("touchstart", (e) => {
 	touchStartX = e.changedTouches[0].screenX;
@@ -183,9 +189,7 @@ updateCarousel(0);
 // ABOUT //
 
 
-const scrollContainer = document.getElementById("imageScroll");
-const leftBtn = document.querySelector(".scroll-btn.left");
-const rightBtn = document.querySelector(".scroll-btn.right");
+
 
 leftBtn.addEventListener("click", () => {
   scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
@@ -195,5 +199,7 @@ rightBtn.addEventListener("click", () => {
   scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
 });
 
+
+// product //
 
 
